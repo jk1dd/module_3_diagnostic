@@ -21,7 +21,7 @@ feature 'User can locate stations' do
 
         fill_in "q", with: "80203"
         click_on "Locate"
-
+# save_and_open_page
         expect(current_path).to eq('/search')
         expect(page).to have_content("Name")
         expect(page).to have_content("Address")
