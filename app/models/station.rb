@@ -1,12 +1,11 @@
 class Station
   def initialize(attrs = {})
-    # @zip = zip
     @attrs = attrs
   end
 
   def self.stations(zip)
     NrelService.new(zip).find_stations[:fuel_stations].map do |station|
-      Station.new(station)
+      new(station)
     end
   end
 
