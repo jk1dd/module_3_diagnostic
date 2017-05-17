@@ -1,8 +1,8 @@
 <% @stations.each do |s| %>
-<p>Name: <%= s["station_name"] %></p>
-<p>Address: <%= s["street_address"] %></p>
-<p>Fuel Types: <%= s["fuel_type_code"] %></p>
-<p>Distance: <%= s["distance"] %></p>
-<p>Access Times: <%= s["access_days_time"] %></p>
+<p>Name: <%= s.station_name %></p>
+<p>Address: <%= s.street_address %></p>
+<p>Fuel Types: <%= s.fuel_type_code %></p>
+<p>Distance: <%= s.distance %></p>
+<p>Access Times: <%= s.access_days_time %></p>
 ----------------------
 <% end %>
