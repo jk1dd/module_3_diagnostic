@@ -15,9 +15,11 @@ feature 'User can locate stations' do
   context 'by entering zip' do
     scenario 'she can see 10 closest within 6 miles, only electric and propane' do
       VCR.use_cassette('user_locates') do
+        # Capybara.app = AltFuelFinder::Application
         visit '/'
+        # save_and_open_page
 
-        fill_in "ZIP", with: "80203"
+        fill_in "q", with: "80203"
         click_on "Locate"
 
         expect(current_path).to eq('/search')
